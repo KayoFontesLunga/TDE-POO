@@ -4,40 +4,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TDE_POO
+namespace TDE_POO 
 {
     internal class Inventory
     {
-        private readonly List<Product> product = [];
+        private readonly List<Product> products = new List<Product>();
 
-        public void AddProduct(Product Product)
+        public void AddProduct(Product product)
         {
-            product.Add(Product);
+            products.Add(product);
             Console.WriteLine("Product added successfully!\n");
         }
 
         public void ListProducts()
         {
             Console.WriteLine("\n--- Products in Inventory ---");
-            if (product.Count == 0)
+            if (products.Count == 0)
             {
-                Console.WriteLine("No Product registered.");
+                Console.WriteLine("No products registered.");
             }
             else
             {
-                for (int i = 0; i < product.Count; i++)
+                for (int i = 0; i < products.Count; i++)
                 {
-                    Console.WriteLine($"{i + 1}. {product[i]}");
+                    Console.WriteLine($"{i + 1}. {products[i]}");
                 }
             }
             Console.WriteLine();
         }
 
-        public void EditProduct(int i, Product newProduct)
+        public void EditProduct(int index, Product newProduct)
         {
-            if (i >= 0 && i < product.Count)
+            if (index >= 0 && index < products.Count)
             {
-                product[i] = newProduct;
+                products[index] = newProduct;
                 Console.WriteLine("Product updated successfully!\n");
             }
             else
@@ -46,11 +46,11 @@ namespace TDE_POO
             }
         }
 
-        public void RemoveProduct(int i)
+        public void RemoveProduct(int index)
         {
-            if (i >= 0 && i < product.Count)
+            if (index >= 0 && index < products.Count)
             {
-                product.RemoveAt(i);
+                products.RemoveAt(index);
                 Console.WriteLine("Product successfully removed!\n");
             }
             else
