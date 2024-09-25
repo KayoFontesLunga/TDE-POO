@@ -118,7 +118,7 @@ namespace TDE_POO
                     break;
             }
 
-            // Após a ação, o menu é mostrado novamente
+            // Após a ação, o menu é mostrado novamente.
             Show();
         }
 
