@@ -14,7 +14,7 @@ namespace TDE_POO
 
         public override string ToString()
         {
-            return $"Nome: {Name}, Quantidade: {Quantity}, Preço: R${Price:F2}";
+            return $"Name: {Name}, Quantity: {Quantity}, Price: R${Price:F2}";
         }
     }
 }

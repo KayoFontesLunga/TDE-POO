@@ -13,9 +13,8 @@ namespace TDE_POO
         public void AddProduct(Product product)
         {
             products.Add(product);
-            Console.WriteLine("Product added successfully!\n");
+            Console.WriteLine("\nProduct added successfully!\n");
         }
-
         public void ListProducts()
         {
             Console.WriteLine("\n--- Products in Inventory ---");
@@ -32,31 +31,33 @@ namespace TDE_POO
             }
             Console.WriteLine();
         }
-
         public void EditProduct(int index, Product newProduct)
         {
             if (index >= 0 && index < products.Count)
             {
                 products[index] = newProduct;
-                Console.WriteLine("Product updated successfully!\n");
+                Console.WriteLine("\nProduct updated successfully!\n");
             }
             else
             {
                 Console.WriteLine("Invalid index!\n");
             }
         }
-
         public void RemoveProduct(int index)
         {
             if (index >= 0 && index < products.Count)
             {
                 products.RemoveAt(index);
-                Console.WriteLine("Product successfully removed!\n");
+                Console.WriteLine("\nProduct successfully removed!\n");
             }
             else
             {
                 Console.WriteLine("Invalid index!\n");
             }
+        }
+        public int GetProductCount()
+        {
+            return products.Count;
         }
     }
 }
